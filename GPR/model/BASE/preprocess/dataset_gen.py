@@ -220,8 +220,8 @@ def generate_raw_sequential_dataset():
         #     datas.extend(pr_datas)
 
     # df = pd.DataFrame(datas)
-    # df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\squential_oss.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    # df.to_csv(r'.\dataset\OSS\squential_oss.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -277,8 +277,8 @@ def generate_sequential_dataset():
             datas.extend(pr_datas)
 
     df = pd.DataFrame(datas)
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\squential_oss.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    df.to_csv(r'.\dataset\OSS\squential_oss.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -314,8 +314,8 @@ def generate_dataset_with_user_history():
 
 
     df = pd.DataFrame(datas)
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss_with_user_history.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    df.to_csv(r'.\dataset\OSS\oss_with_user_history.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -501,8 +501,8 @@ def generate_dataset():
             datas.extend(issue_datas)
 
     df = pd.DataFrame(datas)
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    df.to_csv(r'.\dataset\OSS\oss.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -524,8 +524,8 @@ def generate_sr_dataset():
             datas.extend(user_datas)
 
     df = pd.DataFrame(datas)
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss_sr.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    df.to_csv(r'.\dataset\OSS\oss_sr.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -547,8 +547,8 @@ def generate_dataset_from_pr():
             datas.extend(issue_datas)
 
     df = pd.DataFrame(datas)
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss_pr.csv')
-    # df = pd.read_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
+    df.to_csv(r'.\dataset\OSS\oss_pr.csv')
+    # df = pd.read_csv(r'.\dataset\OSS\oss.csv', header=0, usecols=[1, 2, 3, 4, 5])
     # print(df)
     return datas
 
@@ -1067,11 +1067,11 @@ def make_statistics(data_slice):
     return group_user.tolist(), group_behavior.tolist()
 
 def union_dataset():
-    issue_df = pd.read_csv(r"C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss_issue.csv", header=0, usecols=[1,2,3,4,5])
-    pr_df = pd.read_csv(r"C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss_pr.csv", header=0, usecols=[1,2,3,4,5])
+    issue_df = pd.read_csv(r".\dataset\OSS\oss_issue.csv", header=0, usecols=[1,2,3,4,5])
+    pr_df = pd.read_csv(r".\dataset\OSS\oss_pr.csv", header=0, usecols=[1,2,3,4,5])
 
     df = pd.concat([issue_df, pr_df])
-    df.to_csv(r'C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv')
+    df.to_csv(r'.\dataset\OSS\oss.csv')
 
 if __name__ == "__main__":
 
@@ -1099,7 +1099,7 @@ if __name__ == "__main__":
     # # for i, (group_user, group_behavior, target_user, target_behavior, negative_behavior) in enumerate(train_dataloader):
     # #     model(group_user, group_behavior, target_user, target_behavior)
 
-    # df = pd.read_csv(r"C:\Neil\Code\internet_of_behavior\pyiob\dataset\OSS\oss.csv", header=0, usecols=[1,2,3,4,5])
+    # df = pd.read_csv(r".\dataset\OSS\oss.csv", header=0, usecols=[1,2,3,4,5])
     # dataset = GroupDataset(df.values, CONSTANT.TOTAL_USER, CONSTANT.TOTAL_TYPE)
     # train_dataloader = DataLoader(dataset=dataset, batch_size=1)
     # model = GPR(GPR_CONFIG.USE_NUM, GPR_CONFIG.ITEM_NUM, GPR_CONFIG.USER_EMB_SIZE, GPR_CONFIG.ITEM_EMB_SIZE)
