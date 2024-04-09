@@ -1,0 +1,40 @@
+LAMBDA2=0.001
+BATCH_SIZE = 256
+MAX_ITER = 1000
+EMB_SIZE = 64
+LEARNING_RATE = 0.005
+MAX_LEN = 5
+NUM_BLOCK_LAYERS = 2
+
+
+TRAIN_PERCENTAGE = 0.7
+VAL_PERCENTAGE = 0.2
+NEGATIVE_SAMPLING_COUNT = 1
+
+RECOMMEND_NUM = 10
+RECOMMEND_NUM_1 = 30
+VAL_BATCH_SIZE = 1024
+
+
+ADAM = "ADAM"
+SGD = "SGD"
+OPTIMIZER = ADAM
+
+
+# RUMC
+GAMMA1 = 7
+GAMMA2 = 1
+THRESHOLD = 0.3
+
+
+'''
+music instrument
+automotive
+movie
+'''
+MUSIC_INSTRUMENT = "music instrument"
+DIGITAL_MUSIC = "digital music"
+LUXURY_BEAUTY = "luxury beauty"
+scenario = LUXURY_BEAUTY
+
+OUTPUT_DIR = 'CausalRec/saved_model/FMLP'
